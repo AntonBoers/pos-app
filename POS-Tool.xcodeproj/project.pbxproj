@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33185A291BBC165E0061602F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A281BBC165E0061602F /* AppDelegate.swift */; };
+		33185A2C1BBC165E0061602F /* Butikker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33185A2A1BBC165E0061602F /* Butikker.xcdatamodeld */; };
+		33185A2E1BBC165E0061602F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A2D1BBC165E0061602F /* ViewController.swift */; };
+		33185A331BBC165E0061602F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33185A321BBC165E0061602F /* Images.xcassets */; };
+		33185A421BBC165E0061602F /* ButikkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A411BBC165E0061602F /* ButikkerTests.swift */; };
+		332BE5FB1BF9FA5F00511416 /* ViewControllerButikInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */; };
+		333357011BEA452400603151 /* ViewControllerFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */; };
+		3386BAD01C22F7B3000AF0DA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3386BACF1C22F7B3000AF0DA /* Settings.bundle */; };
+		33E240B51C51395500C5210B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E240B31C51395500C5210B /* LaunchScreen.xib */; };
+		33E240B81C5139CC00C5210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E240B61C5139CC00C5210B /* Main.storyboard */; };
+		33E6946A1BC67FB100851C34 /* Swifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E694691BC67FB100851C34 /* Swifty.swift */; };
+		33E694781BC6A12600851C34 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E694771BC6A12600851C34 /* TableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33185A3C1BBC165E0061602F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33185A1B1BBC165E0061602F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33185A221BBC165E0061602F;
+			remoteInfo = Butikker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33185A231BBC165E0061602F /* POS-Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS-Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33185A271BBC165E0061602F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33185A281BBC165E0061602F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33185A2B1BBC165E0061602F /* Butikker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Butikker.xcdatamodel; sourceTree = "<group>"; };
+		33185A2D1BBC165E0061602F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		33185A321BBC165E0061602F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		33185A3B1BBC165E0061602F /* POS-Tool.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POS-Tool.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33185A401BBC165E0061602F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33185A411BBC165E0061602F /* ButikkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButikkerTests.swift; sourceTree = "<group>"; };
+		332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerButikInfo.swift; sourceTree = "<group>"; };
+		333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerFirstLaunch.swift; path = ../ViewControllerFirstLaunch.swift; sourceTree = "<group>"; };
+		3386BACF1C22F7B3000AF0DA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		33E240B41C51395500C5210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Butikker/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		33E240B71C5139CC00C5210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Butikker/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33E694691BC67FB100851C34 /* Swifty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swifty.swift; sourceTree = "<group>"; };
+		33E694771BC6A12600851C34 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = Butikker/TableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33185A201BBC165E0061602F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33185A381BBC165E0061602F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33185A1A1BBC165E0061602F = {
+			isa = PBXGroup;
+			children = (
+				33E694771BC6A12600851C34 /* TableViewCell.swift */,
+				33185A251BBC165E0061602F /* Butikker */,
+				33185A3E1BBC165E0061602F /* ButikkerTests */,
+				33185A241BBC165E0061602F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33185A241BBC165E0061602F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33185A231BBC165E0061602F /* POS-Tool.app */,
+				33185A3B1BBC165E0061602F /* POS-Tool.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33185A251BBC165E0061602F /* Butikker */ = {
+			isa = PBXGroup;
+			children = (
+				3386BACF1C22F7B3000AF0DA /* Settings.bundle */,
+				333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */,
+				332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */,
+				33E694691BC67FB100851C34 /* Swifty.swift */,
+				33185A281BBC165E0061602F /* AppDelegate.swift */,
+				33185A2D1BBC165E0061602F /* ViewController.swift */,
+				33185A321BBC165E0061602F /* Images.xcassets */,
+				33E240B61C5139CC00C5210B /* Main.storyboard */,
+				33E240B31C51395500C5210B /* LaunchScreen.xib */,
+				33185A2A1BBC165E0061602F /* Butikker.xcdatamodeld */,
+				33185A261BBC165E0061602F /* Supporting Files */,
+			);
+			path = Butikker;
+			sourceTree = "<group>";
+		};
+		33185A261BBC165E0061602F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33185A271BBC165E0061602F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33185A3E1BBC165E0061602F /* ButikkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				33185A411BBC165E0061602F /* ButikkerTests.swift */,
+				33185A3F1BBC165E0061602F /* Supporting Files */,
+			);
+			path = ButikkerTests;
+			sourceTree = "<group>";
+		};
+		33185A3F1BBC165E0061602F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33185A401BBC165E0061602F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33185A221BBC165E0061602F /* POS-Tool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33185A451BBC165E0061602F /* Build configuration list for PBXNativeTarget "POS-Tool" */;
+			buildPhases = (
+				33185A1F1BBC165E0061602F /* Sources */,
+				33185A201BBC165E0061602F /* Frameworks */,
+				33185A211BBC165E0061602F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POS-Tool";
+			productName = Butikker;
+			productReference = 33185A231BBC165E0061602F /* POS-Tool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33185A3A1BBC165E0061602F /* POS-ToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33185A481BBC165E0061602F /* Build configuration list for PBXNativeTarget "POS-ToolTests" */;
+			buildPhases = (
+				33185A371BBC165E0061602F /* Sources */,
+				33185A381BBC165E0061602F /* Frameworks */,
+				33185A391BBC165E0061602F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33185A3D1BBC165E0061602F /* PBXTargetDependency */,
+			);
+			name = "POS-ToolTests";
+			productName = ButikkerTests;
+			productReference = 33185A3B1BBC165E0061602F /* POS-Tool.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33185A1B1BBC165E0061602F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Thomas Bjørk";
+				TargetAttributes = {
+					33185A221BBC165E0061602F = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3G383V2MGN;
+					};
+					33185A3A1BBC165E0061602F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 33185A221BBC165E0061602F;
+					};
+				};
+			};
+			buildConfigurationList = 33185A1E1BBC165E0061602F /* Build configuration list for PBXProject "POS-Tool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 33185A1A1BBC165E0061602F;
+			productRefGroup = 33185A241BBC165E0061602F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33185A221BBC165E0061602F /* POS-Tool */,
+				33185A3A1BBC165E0061602F /* POS-ToolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33185A211BBC165E0061602F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3386BAD01C22F7B3000AF0DA /* Settings.bundle in Resources */,
+				33E240B51C51395500C5210B /* LaunchScreen.xib in Resources */,
+				33185A331BBC165E0061602F /* Images.xcassets in Resources */,
+				33E240B81C5139CC00C5210B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33185A391BBC165E0061602F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33185A1F1BBC165E0061602F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33E694781BC6A12600851C34 /* TableViewCell.swift in Sources */,
+				33185A2E1BBC165E0061602F /* ViewController.swift in Sources */,
+				332BE5FB1BF9FA5F00511416 /* ViewControllerButikInfo.swift in Sources */,
+				33E6946A1BC67FB100851C34 /* Swifty.swift in Sources */,
+				333357011BEA452400603151 /* ViewControllerFirstLaunch.swift in Sources */,
+				33185A2C1BBC165E0061602F /* Butikker.xcdatamodeld in Sources */,
+				33185A291BBC165E0061602F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33185A371BBC165E0061602F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33185A421BBC165E0061602F /* ButikkerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33185A3D1BBC165E0061602F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33185A221BBC165E0061602F /* POS-Tool */;
+			targetProxy = 33185A3C1BBC165E0061602F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33E240B31C51395500C5210B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33E240B41C51395500C5210B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		33E240B61C5139CC00C5210B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33E240B71C5139CC00C5210B /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33185A431BBC165E0061602F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33185A441BBC165E0061602F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33185A461BBC165E0061602F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tb/Desktop/SwiftyJSON-master/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = Butikker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CBIT-A-S.POS-Tool";
+				PRODUCT_NAME = "POS-Tool";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33185A471BBC165E0061602F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/tb/Desktop/SwiftyJSON-master/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = Butikker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CBIT-A-S.POS-Tool";
+				PRODUCT_NAME = "POS-Tool";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33185A491BBC165E0061602F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ButikkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CBIT-A-S.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "POS-Tool";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POS-Tool.app/POS-Tool";
+			};
+			name = Debug;
+		};
+		33185A4A1BBC165E0061602F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ButikkerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CBIT-A-S.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "POS-Tool";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POS-Tool.app/POS-Tool";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33185A1E1BBC165E0061602F /* Build configuration list for PBXProject "POS-Tool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33185A431BBC165E0061602F /* Debug */,
+				33185A441BBC165E0061602F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33185A451BBC165E0061602F /* Build configuration list for PBXNativeTarget "POS-Tool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33185A461BBC165E0061602F /* Debug */,
+				33185A471BBC165E0061602F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33185A481BBC165E0061602F /* Build configuration list for PBXNativeTarget "POS-ToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33185A491BBC165E0061602F /* Debug */,
+				33185A4A1BBC165E0061602F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33185A2A1BBC165E0061602F /* Butikker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33185A2B1BBC165E0061602F /* Butikker.xcdatamodel */,
+			);
+			currentVersion = 33185A2B1BBC165E0061602F /* Butikker.xcdatamodel */;
+			path = Butikker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 33185A1B1BBC165E0061602F /* Project object */;
+}
