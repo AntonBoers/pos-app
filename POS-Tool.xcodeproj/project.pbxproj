@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33008EBB1D182A9D000F9890 /* KasseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33008EBA1D182A9D000F9890 /* KasseTableViewCell.swift */; };
 		33185A291BBC165E0061602F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A281BBC165E0061602F /* AppDelegate.swift */; };
 		33185A2C1BBC165E0061602F /* Butikker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33185A2A1BBC165E0061602F /* Butikker.xcdatamodeld */; };
 		33185A2E1BBC165E0061602F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A2D1BBC165E0061602F /* ViewController.swift */; };
 		33185A331BBC165E0061602F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33185A321BBC165E0061602F /* Images.xcassets */; };
 		33185A421BBC165E0061602F /* ButikkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33185A411BBC165E0061602F /* ButikkerTests.swift */; };
+		332065F51CD2374700A97B9E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332065F41CD2374700A97B9E /* Keychain.swift */; };
 		332BE5FB1BF9FA5F00511416 /* ViewControllerButikInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */; };
+		33317D351C9B041000DA93C2 /* LogIndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33317D341C9B041000DA93C2 /* LogIndViewController.swift */; };
 		333357011BEA452400603151 /* ViewControllerFirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */; };
-		3386BAD01C22F7B3000AF0DA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3386BACF1C22F7B3000AF0DA /* Settings.bundle */; };
 		33E240B51C51395500C5210B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E240B31C51395500C5210B /* LaunchScreen.xib */; };
 		33E240B81C5139CC00C5210B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E240B61C5139CC00C5210B /* Main.storyboard */; };
 		33E6946A1BC67FB100851C34 /* Swifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E694691BC67FB100851C34 /* Swifty.swift */; };
 		33E694781BC6A12600851C34 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E694771BC6A12600851C34 /* TableViewCell.swift */; };
+		D861E8D8802CE50D455F61D8 /* Pods_POS_Tool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC87F26C00E3BEA4F479F324 /* Pods_POS_Tool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33008EBA1D182A9D000F9890 /* KasseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KasseTableViewCell.swift; sourceTree = "<group>"; };
 		33185A231BBC165E0061602F /* POS-Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS-Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33185A271BBC165E0061602F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33185A281BBC165E0061602F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,13 +45,17 @@
 		33185A3B1BBC165E0061602F /* POS-Tool.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POS-Tool.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33185A401BBC165E0061602F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33185A411BBC165E0061602F /* ButikkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButikkerTests.swift; sourceTree = "<group>"; };
+		332065F41CD2374700A97B9E /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerButikInfo.swift; sourceTree = "<group>"; };
+		33317D341C9B041000DA93C2 /* LogIndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIndViewController.swift; sourceTree = "<group>"; };
 		333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerFirstLaunch.swift; path = ../ViewControllerFirstLaunch.swift; sourceTree = "<group>"; };
-		3386BACF1C22F7B3000AF0DA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		33E240B41C51395500C5210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Butikker/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		33E240B71C5139CC00C5210B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Butikker/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33E694691BC67FB100851C34 /* Swifty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swifty.swift; sourceTree = "<group>"; };
 		33E694771BC6A12600851C34 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = Butikker/TableViewCell.swift; sourceTree = "<group>"; };
+		8AC581732FC66153AC9F0CC1 /* Pods-POS-Tool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS-Tool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POS-Tool/Pods-POS-Tool.debug.xcconfig"; sourceTree = "<group>"; };
+		A65B6F09444B71864C23DD62 /* Pods-POS-Tool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS-Tool.release.xcconfig"; path = "Pods/Target Support Files/Pods-POS-Tool/Pods-POS-Tool.release.xcconfig"; sourceTree = "<group>"; };
+		EC87F26C00E3BEA4F479F324 /* Pods_POS_Tool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_POS_Tool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D861E8D8802CE50D455F61D8 /* Pods_POS_Tool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +80,13 @@
 		33185A1A1BBC165E0061602F = {
 			isa = PBXGroup;
 			children = (
+				33008EBA1D182A9D000F9890 /* KasseTableViewCell.swift */,
 				33E694771BC6A12600851C34 /* TableViewCell.swift */,
 				33185A251BBC165E0061602F /* Butikker */,
 				33185A3E1BBC165E0061602F /* ButikkerTests */,
 				33185A241BBC165E0061602F /* Products */,
+				E35CD66BE5BF70FD19EA3731 /* Pods */,
+				D38BB1E92B3EF387A70EC00A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,7 +102,8 @@
 		33185A251BBC165E0061602F /* Butikker */ = {
 			isa = PBXGroup;
 			children = (
-				3386BACF1C22F7B3000AF0DA /* Settings.bundle */,
+				332065F41CD2374700A97B9E /* Keychain.swift */,
+				33317D341C9B041000DA93C2 /* LogIndViewController.swift */,
 				333357001BEA452400603151 /* ViewControllerFirstLaunch.swift */,
 				332BE5FA1BF9FA5F00511416 /* ViewControllerButikInfo.swift */,
 				33E694691BC67FB100851C34 /* Swifty.swift */,
@@ -130,6 +143,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D38BB1E92B3EF387A70EC00A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC87F26C00E3BEA4F479F324 /* Pods_POS_Tool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E35CD66BE5BF70FD19EA3731 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AC581732FC66153AC9F0CC1 /* Pods-POS-Tool.debug.xcconfig */,
+				A65B6F09444B71864C23DD62 /* Pods-POS-Tool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33185A451BBC165E0061602F /* Build configuration list for PBXNativeTarget "POS-Tool" */;
 			buildPhases = (
+				CDA7A7F396D6D969BB5339BB /* Check Pods Manifest.lock */,
 				33185A1F1BBC165E0061602F /* Sources */,
 				33185A201BBC165E0061602F /* Frameworks */,
 				33185A211BBC165E0061602F /* Resources */,
+				3012C4A5C3465380BD0DDFC7 /* Embed Pods Frameworks */,
+				CF1435657DC34D318A07A95F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3386BAD01C22F7B3000AF0DA /* Settings.bundle in Resources */,
 				33E240B51C51395500C5210B /* LaunchScreen.xib in Resources */,
 				33185A331BBC165E0061602F /* Images.xcassets in Resources */,
 				33E240B81C5139CC00C5210B /* Main.storyboard in Resources */,
@@ -229,18 +261,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3012C4A5C3465380BD0DDFC7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POS-Tool/Pods-POS-Tool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA7A7F396D6D969BB5339BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1435657DC34D318A07A95F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POS-Tool/Pods-POS-Tool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33185A1F1BBC165E0061602F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				33E694781BC6A12600851C34 /* TableViewCell.swift in Sources */,
+				33008EBB1D182A9D000F9890 /* KasseTableViewCell.swift in Sources */,
+				33317D351C9B041000DA93C2 /* LogIndViewController.swift in Sources */,
 				33185A2E1BBC165E0061602F /* ViewController.swift in Sources */,
 				332BE5FB1BF9FA5F00511416 /* ViewControllerButikInfo.swift in Sources */,
 				33E6946A1BC67FB100851C34 /* Swifty.swift in Sources */,
 				333357011BEA452400603151 /* ViewControllerFirstLaunch.swift in Sources */,
 				33185A2C1BBC165E0061602F /* Butikker.xcdatamodeld in Sources */,
 				33185A291BBC165E0061602F /* AppDelegate.swift in Sources */,
+				332065F51CD2374700A97B9E /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +453,14 @@
 		};
 		33185A461BBC165E0061602F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC581732FC66153AC9F0CC1 /* Pods-POS-Tool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tb/Desktop/SwiftyJSON-master/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = Butikker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -388,12 +473,14 @@
 		};
 		33185A471BBC165E0061602F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65B6F09444B71864C23DD62 /* Pods-POS-Tool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tb/Desktop/SwiftyJSON-master/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = Butikker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

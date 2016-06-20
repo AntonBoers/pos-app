@@ -9,7 +9,6 @@
 
 import UIKit
 import CoreData
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
         let systemVersion = (UIDevice.currentDevice().systemVersion as NSString).floatValue
         if(systemVersion > 7)
         {
+            
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "ios8+")
             NSUserDefaults.standardUserDefaults().synchronize()
         }

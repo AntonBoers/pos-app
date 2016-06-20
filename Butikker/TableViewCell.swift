@@ -14,6 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var budget: UILabel!
     @IBOutlet var omsætning: UILabel!
     @IBOutlet var antal: UILabel!
+    @IBOutlet var omsbon: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

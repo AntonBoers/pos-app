@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverControllerDelegate {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var omsaetningTotal: UILabel!
     @IBOutlet var antalTotal: UILabel!
-    //var data = NSMutableData()
+
     var json : JSON = []
     var jsonExist = false
     var array : [String] = []
@@ -26,6 +26,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var refreshControl:UIRefreshControl!
     
+    var arrayID : [Int] = []
+    
+    @IBOutlet var logUdButton: UIButton!
+    
+    @IBAction func logdUdAction(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().setValue(false, forKey: "hasLoginKey")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        let cookieJar = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        
+        for cookie in cookieJar.cookies! as [NSHTTPCookie]
+        {
+            cookieJar.deleteCookie(cookie)
+        }
+        
+        let keychain = Keychain()
+        keychain["id"] = nil
+        keychain["username"] = nil
+        keychain["password"] = nil
+        
+        performSegueWithIdentifier("message", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,90 +60,70 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
         
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"checkForToken", name: UIApplicationWillEnterForegroundNotification, object: nil) //Caller funktionen 'checkForToken' når appen kommer i foreground
-        
-        if(NSUserDefaults.standardUserDefaults().objectForKey("butik_token") != nil)
-        {
-            if(NSUserDefaults.standardUserDefaults().valueForKey("butik_token") as! NSString != "")
-            {
-                //trimmer token
-                butikToken = NSUserDefaults.standardUserDefaults().valueForKey("butik_token") as! String
-                butikToken = butikToken.stringByReplacingOccurrencesOfString(" ", withString: "")
-                butikToken = butikToken.stringByReplacingOccurrencesOfString("{", withString: "")
-                butikToken = butikToken.stringByReplacingOccurrencesOfString("}", withString: "")
-            }
-        }
-        
-        if(NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") && butikToken != "")
-        {
-            //Kalder getJSON
-            getJSON()
-
-        }
-        else
-        {
-            //first launch
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
-            performSegueWithIdentifier("message", sender: self)
-            
-        }
-    }
-    
-    func checkForToken() //Denne funktion bliver kun kaldt efter at appen returner til foreground!!
-    {
-        //checker om der har været nogen æmdringer i token, trimmer osv
-        if(NSUserDefaults.standardUserDefaults().objectForKey("butik_token") != nil)
-        {
-            if(NSUserDefaults.standardUserDefaults().valueForKey("butik_token") as! NSString != "")
-            {
-                butikToken = NSUserDefaults.standardUserDefaults().valueForKey("butik_token") as! String
-                butikToken = butikToken.stringByReplacingOccurrencesOfString(" ", withString: "")
-                butikToken = butikToken.stringByReplacingOccurrencesOfString("{", withString: "")
-                butikToken = butikToken.stringByReplacingOccurrencesOfString("}", withString: "")
-            }
-        }
         getJSON()
     }
     
+    override func viewDidAppear(animated: Bool) {
+     
+        //getJSON()
+    }
+    
+    
+    
     func getJSON(){
-        let urlString = "http://www.eadministration.dk/tokenlokation.asp?token=%7b" + butikToken + "%7d"  //JSON url
-        if let url = NSURL(string: urlString){ //checker at URL er valid
-            if let data = try? NSData(contentsOfURL: url, options: []) { //checker hvis det er muligt at få JSON fra url'en. Hvis det ikke er, så er token invalid og if(json[0].. bliver kaldt og sikre sig, at der intet JSON information er blevet hentet. Den vil derefter displaye en alert box der forklare at token er invalid og tvinger brugeren ind i Indstillinger
-                json = JSON(data: data)
-                tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine //Separator line = true
-            }
-            else{
-                json = []
-                tableView.separatorStyle = UITableViewCellSeparatorStyle.None //Separator line = false
-                print("token ikke valid")
-                let alert = UIAlertController(title: "Forkert token", message: "Den token du har indtastet under Indstillinger matcher ikke noget i vores database\n Gå ind i Indstillinger og sikre dig, at du har skrevet den korrekt"
-                    , preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "Gå Til Indstillinger", style: UIAlertActionStyle.Default, handler: { action in
-                    UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
-                }))
-                
-                presentViewController(alert, animated: true, completion: nil) //viser alert'en
-            }
-        }
+
+        let url:NSURL = NSURL(string: "https://www.eadministration.dk/tokenlokation.asp")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
         
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { //Kører en task i background thread
-            self.parseJSON(self.json, number: 3) //Bliver kaldt i background thread
-            dispatch_async(dispatch_get_main_queue()) { //Main queue til UI updates
-                self.tableView.reloadData()
-                
-                self.antalTotal.text! = ""
-                self.omsaetningTotal.text! = ""
-                
-                self.antalTotal.text! += String("Antal bonner total: "  + String(self.antalTotalInt))
-                self.omsaetningTotal.text! += String("Omsætning total: "  + String(self.omsætningTotalFloat))
+        request.HTTPMethod = "GET"
+        
+        var cookieToSend : NSHTTPCookie!
+        let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
+        for cookie in cookies! {
+            var cookieProperties = [String: AnyObject]()
+            cookieProperties[NSHTTPCookieName] = cookie.name
+            cookieProperties[NSHTTPCookieValue] = cookie.value
+            
+            
+            if(cookie.name == "esession" && cookie.value != "")
+            {
+                NSHTTPCookieStorage.sharedHTTPCookieStorage().setCookie(cookie)
+                cookieToSend = cookie
+            }
+            
+        }
+
+        request.setValue(cookieToSend.value, forHTTPHeaderField: "Set-Cookie")
+        
+        
+        
+        let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
+
+            self.json = JSON(data: data!)
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+            
+            
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { //Kører en task i background thread
+                self.parseJSON(self.json, number: 3) //Bliver kaldt i background thread
+                dispatch_async(dispatch_get_main_queue()) { //Main queue til UI updates
+                    self.tableView.reloadData()
+                    
+                    self.antalTotal.text! = ""
+                    self.omsaetningTotal.text! = ""
+                    
+                    self.antalTotal.text! += String("Antal bonner total: "  + String(self.antalTotalInt))
+                    self.omsaetningTotal.text! += String("Omsætning total: "  + String(self.omsætningTotalFloat))
+                    
+                }
             }
         }
+        task.resume()
+        
+
+        
     }
     
     func refresh(){
@@ -137,10 +140,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func parseJSON(json: JSON, number: Int) {
         var arrayAntal : [Int] = [] //Indenholder alle antal fra JSON variablen 'Antal'
         var arrayOmsaetning : [String] = [] //Indenholder alle omsætnings values fra JSON
-        
+
         for result in json[].arrayValue {
             arrayAntal.append(result["Antal"].intValue) //Looper gennem JSON og adder alle 'antal' over i arrayet
             arrayOmsaetning.append(result["Oms"].stringValue) //Looper gennem JSON og adder alle 'Omsætning' over i arrayet
+            arrayID.append(result["ID"].intValue)
             
         }
         
@@ -157,7 +161,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        /* Koden til 'vis Mere' funktion - checker bare efter segue identifier
+        
         if(segue.identifier == "GoButik")
         {
             let nextViewController = (segue.destinationViewController as! ViewControllerButikInfo)
@@ -169,8 +173,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             nextViewController.budget = cell.budget.text!
             nextViewController.omsaetning = cell.omsætning.text!
             nextViewController.antal = cell.antal.text!
+            nextViewController.omsaetningb = cell.omsbon.text!
         }
-        */
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -192,32 +197,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        /* Koden til 'vis Mere' funktion
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TableViewCell
         
         print("BUTIK: " + cell.titel.text!)
         
+        /*
+        
         let nextViewController = ViewControllerButikInfo()
-        nextViewController.navn = cell.titel.text!
+        //nextViewController.navn = cell.titel.text!
         print(nextViewController.navn + " burde vaere OK")
         nextViewController.budget = cell.budget.text!
-        nextViewController.omsaetning = cell.omsætning.text!
+        nextViewController.omsaetning = "good"
         nextViewController.antal = cell.antal.text!
-        
-        performSegueWithIdentifier("GoButik", sender: indexPath)
+        nextViewController.id = arrayID[indexPath.row]
         */
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("GoButik", sender: indexPath)
+        
         
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
+        
+        cell.selectionStyle = UITableViewCellSelectionStyle.Default
+        
         //Fylder cellerne
         let row = indexPath.row
         
-        if((row % 2) == 0){ //Hvert row som er et lige tal har hvid baggrund
+        // Lige rækker
+        if((row % 2) == 0){
             cell.backgroundColor = UIColor.whiteColor()
-        }
-        else{ //hvert row som er et 'un-even' tal har svag toning af grå
+            
+        // Ulige rækker
+        } else {
             cell.backgroundColor = UIColor(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1.0)
         }
         
@@ -227,12 +240,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let beskrivelse = json[row]["Beskrivelse"]
         let antal = json[row]["Antal"]
         
+        //Omsætning pr bon
+        let omsFloat = Float((json[row]["Oms"].stringValue).stringByReplacingOccurrencesOfString(",", withString: "."))
+        let antalFloat = Float((json[row]["Antal"].stringValue).stringByReplacingOccurrencesOfString(",", withString: "."))
+        
+        let gennemsnitBon : Float32 = (omsFloat! / antalFloat!)
+        cell.omsbon.text = String(gennemsnitBon)
+        
         //Populater cellernes labels med information fra JSON såsom omsætning, antal bonner osv
         cell.titel.text = String(Lokation) + ": " + String(beskrivelse)
         cell.budget.text = "INTET"
         cell.omsætning.text = String(Oms)
         cell.antal.text = String(antal)
-    
+        
+        
+        
+        
         if((NSUserDefaults.standardUserDefaults().boolForKey("ios8+")))
         {
             cell.layoutMargins = UIEdgeInsetsZero
